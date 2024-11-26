@@ -1,6 +1,6 @@
 ### Occurrence of character in string
 
-```javascript
+```
 const occurence = (char) => {
   const obj = {};
 
@@ -17,10 +17,11 @@ const occurence = (char) => {
 
 console.log(occurence("javascript")); //{ j: 1, a: 2, v: 1, s: 1, c: 1, r: 1, i: 1, p: 1, t: 1 }
 console.log(occurence("jaavaa")); //{ j: 1, a: 4, v: 1 }
+```
 
-### Occurrence of character in string
 
-
+### first non repeating character in a string
+```
 const firstNonReapeatingChar = (char) => {
   const obj = {};
 
@@ -45,3 +46,4 @@ console.log(firstNonReapeatingChar("javascripts")); // j
 console.log(firstNonReapeatingChar("aajgjaa")); //g
 console.log(firstNonReapeatingChar("aajjaac")); //c
 console.log(firstNonReapeatingChar("aajjaa")); // null
+```
