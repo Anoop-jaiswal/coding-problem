@@ -1,5 +1,6 @@
-### Occurence of character in string
+### Occurrence of character in string
 
+```javascript
 const occurence = (char) => {
   const obj = {};
 
