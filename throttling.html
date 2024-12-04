@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Throttle demo</h1>
+    <input type="text" id="searchBox" />
+
+    <script>
+      const throttle = (func, limit) => {
+        let flag = true;
+        return function (...args) {
+          if (flag) {
+            func(...args); // Pass the arguments to the function
+            flag = false;
+            setTimeout(() => {
+              flag = true;
+            }, limit);
+          }
+        };
+      };
+
+      const search = (event) => {
+        console.log(
+          "throttle function is calling on every interval",
+          event.target.value
+        );
+      };
+
+      const optimise = throttle(search, 2000);
+
+      const inputField = document.getElementById("searchBox");
+      inputField.addEventListener("input", optimise);
+    </script>
+  </body>
+</html>
